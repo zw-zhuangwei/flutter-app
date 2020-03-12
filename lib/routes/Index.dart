@@ -8,6 +8,9 @@ import '../test/route/Name.dart';
 import '../test/route/Replace.dart';
 import '../test/route/Replace2.dart';
 import '../test/dio/Request.dart';
+import '../test/provider/Status.dart';
+import '../test/provider/Status2.dart';
+import '../test/webview/show.dart';
 
 import '../widgets/ContainerAndText.dart';
 import '../widgets/Button.dart';
@@ -25,6 +28,9 @@ final routes = {
   '/replace2RouteTest': (context, {arguments}) =>
       Replace2RouteTest(arguments: arguments),
   '/requestDioTest': (context) => RequestDioTest(),
+  '/statusProviderTest': (context) => StatusProviderTest(),
+  '/status2ProviderTest': (context) => Status2ProviderTest(),
+  '/showWebviewTest': (context) => ShowWebviewTest(),
   '/containerAndText': (context) => ContainerAndText(),
   '/imageWidget': (context) => ImageWidget(),
   '/buttonWidget': (context, {arguments}) => ButtonWidget(arguments: arguments),
