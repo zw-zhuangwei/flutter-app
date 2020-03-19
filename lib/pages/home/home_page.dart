@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          '这里是home1111页-1111',
+          '这里是home1111页-111111',
           style: TextStyle(
             fontSize: 18.0,
           ),
