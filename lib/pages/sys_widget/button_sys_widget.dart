@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-class GeneralRouteTest extends StatelessWidget {
-  String title;
-  GeneralRouteTest({
-    this.title = '标题',
-  });
+class ButtonSysWidget extends StatelessWidget {
+  final String title;
+  final arguments;
+  ButtonSysWidget({this.title = '默认title', this.arguments});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,7 @@ class GeneralRouteTest extends StatelessWidget {
       appBar: AppBar(
         title: Text(this.title),
       ),
-      body: Text('普通路由跳转test'),
+      body: Text('Button内容！${this.arguments}'),
       floatingActionButton: FloatingActionButton(
         child: Text('返回'),
         onPressed: () => Navigator.of(context).pop(),

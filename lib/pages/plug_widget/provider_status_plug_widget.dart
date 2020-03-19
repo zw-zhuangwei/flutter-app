@@ -4,12 +4,13 @@ import 'package:provider/provider.dart';
 
 import '../../provider/Counter.dart';
 
-class StatusProviderTest extends StatefulWidget {
+class ProviderStatusPlugWidget extends StatefulWidget {
   @override
-  _StatusProviderTest createState() => _StatusProviderTest();
+  _ProviderStatusPlugWidgetState createState() =>
+      _ProviderStatusPlugWidgetState();
 }
 
-class _StatusProviderTest extends State<StatusProviderTest> {
+class _ProviderStatusPlugWidgetState extends State<ProviderStatusPlugWidget> {
   var count;
   didChangeDependencies() {
     super.didChangeDependencies();
@@ -41,7 +42,8 @@ class _StatusProviderTest extends State<StatusProviderTest> {
               FlatButton(
                 child: Text("跳转"),
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/status2ProviderTest');
+                  Navigator.of(context)
+                      .pushNamed('/provider_status2_plug_widget');
                 },
               )
             ],

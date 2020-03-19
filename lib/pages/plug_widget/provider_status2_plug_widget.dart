@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../provider/Counter.dart';
 
-class Status2ProviderTest extends StatefulWidget {
+class ProviderStatus2PlugWidget extends StatefulWidget {
   @override
-  _Status2ProviderTestState createState() => _Status2ProviderTestState();
+  _ProviderStatus2PlugWidgetState createState() =>
+      _ProviderStatus2PlugWidgetState();
 }
 
-class _Status2ProviderTestState extends State<Status2ProviderTest> {
+class _ProviderStatus2PlugWidgetState extends State<ProviderStatus2PlugWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

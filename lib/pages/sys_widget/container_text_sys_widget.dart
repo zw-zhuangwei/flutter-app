@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ContainerAndText extends StatefulWidget {
+class ContainerTextSysWidget extends StatefulWidget {
   @override
-  _ContainerAndTextState createState() => _ContainerAndTextState();
+  _ContainerTextSysWidgetState createState() => _ContainerTextSysWidgetState();
 }
 
-class _ContainerAndTextState extends State<ContainerAndText> {
+class _ContainerTextSysWidgetState extends State<ContainerTextSysWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,12 +21,12 @@ class _ContainerAndTextState extends State<ContainerAndText> {
           overflow: TextOverflow.ellipsis,
           maxLines: 2, //最大行数
 
-          textScaleFactor: 2,  // 字放大两倍
-          
+          textScaleFactor: 2, // 字放大两倍
+
           style: TextStyle(
             fontSize: 20.0,
             color: Colors.red,
-           // color: Color.fromARGB(a, r, g, b)  
+            // color: Color.fromARGB(a, r, g, b)
             fontWeight: FontWeight.w400,
             fontStyle: FontStyle.italic, //设置字体倾斜
 
@@ -37,20 +37,21 @@ class _ContainerAndTextState extends State<ContainerAndText> {
             letterSpacing: 3.0, //字间距
           ),
         ),
-        width: 300.0,  // 单位为dp
+        width: 300.0, // 单位为dp
         height: 300.0,
         padding: EdgeInsets.all(10.0),
         margin: EdgeInsets.fromLTRB(20.0, 30.0, 0, 0),
         //transform: Matrix4.translationValues(100, 0, 0), //向右位移100
         alignment: Alignment.bottomLeft, //内容居于底部
 
-        decoration: BoxDecoration(  //装饰
+        decoration: BoxDecoration(
+          //装饰
           color: Colors.yellow,
           border: Border.all(
-             color: Colors.blue,
-             width: 2.0,
+            color: Colors.blue,
+            width: 2.0,
           ),
-          borderRadius: BorderRadius.circular(8.0),  //圆角值
+          borderRadius: BorderRadius.circular(8.0), //圆角值
         ),
       ),
     );

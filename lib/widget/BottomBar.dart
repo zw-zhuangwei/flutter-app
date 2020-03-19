@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import '../home/Index.dart';
-import '../sort/Index.dart';
-import '../mine/Index.dart';
-import '../demo/Index.dart';
+
+import '../pages/home/home_page.dart';
+import '../pages/sys_widget/home_sys_widget.dart';
+import '../pages/plug_widget/home_plug_widget.dart';
+import '../pages/demo/demo_page.dart';
 
 class BottomBar extends StatefulWidget {
-  int index; //从其他页面返回到BottomBar
+  final int index; //从其他页面返回到BottomBar
   BottomBar({this.index = 0});
 
   @override
@@ -18,8 +19,8 @@ class _BottomBarState extends State<BottomBar> {
     _currentIndex = index;
   }
 
-  List _pageList = [HomePage(), SortPage(), MinePage(), DemoPage()];
-  List _pageTitleList = ['Home', 'Sort', 'Mine', 'Demo'];
+  List _pageList = [HomePage(), HomeSysWidget(), HomePlugWidget(), DemoPage()];
+  List _pageTitleList = ['首页', '系统组件', '第三方组件', '示例'];
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,6 @@ class _BottomBarState extends State<BottomBar> {
         currentIndex: this._currentIndex, // 当前页面索引
         onTap: (int i) {
           // 点击切换事件
-          print(i);
           setState(() {
             this._currentIndex = i;
           });
@@ -47,19 +47,19 @@ class _BottomBarState extends State<BottomBar> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('Home'),
+            title: Text('首页'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            title: Text('Sort'),
+            title: Text('系统组件'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            title: Text('Mine'),
+            title: Text('第三方组件'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.details),
-            title: Text('Demo'),
+            title: Text('示例'),
           ),
         ],
       ),

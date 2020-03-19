@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ReplaceRouteTest extends StatefulWidget {
+class ReplaceRoutePage extends StatefulWidget {
   final arguments;
-  ReplaceRouteTest({this.arguments});
+  ReplaceRoutePage({this.arguments});
   @override
-  _ReplaceRouteTestState createState() => _ReplaceRouteTestState();
+  _ReplaceRoutePageState createState() => _ReplaceRoutePageState();
 }
 
-class _ReplaceRouteTestState extends State<ReplaceRouteTest> {
+class _ReplaceRoutePageState extends State<ReplaceRoutePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class _ReplaceRouteTestState extends State<ReplaceRouteTest> {
             color: Theme.of(context).accentColor,
             onPressed: () => {
               Navigator.of(context).pushReplacementNamed(
-                '/replace2RouteTest',
+                '/replace2_router_page',
                 arguments: {
                   'title': 'replace2',
                 },

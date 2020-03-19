@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 /// StatelessWidget如何传值
 
-// class ColumnWidget extends StatelessWidget {
+// class ColumnSysWidget extends StatelessWidget {
 //   String title;
 //   final arguments;
-//   ColumnWidget({this.title = '默认标题', this.arguments});
+//   ColumnSysWidget({this.title = '默认标题', this.arguments});
 
 //   @override
 //   Widget build(BuildContext context) {
@@ -20,16 +20,16 @@ import 'package:flutter/material.dart';
 
 /// StatefulWidget如何传值 方法1
 
-class ColumnWidget extends StatefulWidget {
-  String title;
+class ColumnSysWidget extends StatefulWidget {
+  final String title;
   final arguments;
-  ColumnWidget({this.title = '默认标题', this.arguments});
+  ColumnSysWidget({this.title = '默认标题', this.arguments});
 
   @override
-  _ColumnWidgetState createState() => _ColumnWidgetState();
+  _ColumnSysWidgetState createState() => _ColumnSysWidgetState();
 }
 
-class _ColumnWidgetState extends State<ColumnWidget> {
+class _ColumnSysWidgetState extends State<ColumnSysWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,20 +43,20 @@ class _ColumnWidgetState extends State<ColumnWidget> {
 
 /// StatefulWidget如何传值 方法2
 
-// class ColumnWidget extends StatefulWidget {
+// class ColumnSysWidget extends StatefulWidget {
 //   String title;
 //   final arguments;
-//   ColumnWidget({this.title = '默认标题', this.arguments});
+//   ColumnSysWidget({this.title = '默认标题', this.arguments});
 
 //   @override
-//   _ColumnWidgetState createState() =>
-//       _ColumnWidgetState(title: this.title, arguments: this.arguments);
+//   _ColumnSysWidgetState createState() =>
+//       _ColumnSysWidgetState(title: this.title, arguments: this.arguments);
 // }
 
-// class _ColumnWidgetState extends State<ColumnWidget> {
+// class _ColumnSysWidgetState extends State<ColumnSysWidget> {
 //   String title;
 //   final arguments;
-//   _ColumnWidgetState({this.title, this.arguments});
+//   _ColumnSysWidgetState({this.title, this.arguments});
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(

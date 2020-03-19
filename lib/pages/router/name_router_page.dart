@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 /// StatefulWidget如何传值 方法1
 
-class NameRouteTest extends StatefulWidget {
+class NameRoutePage extends StatefulWidget {
   final arguments;
-  NameRouteTest({this.arguments});
+  NameRoutePage({this.arguments});
 
   @override
-  _NameRouteTestState createState() => _NameRouteTestState();
+  _NameRoutePageState createState() => _NameRoutePageState();
 }
 
-class _NameRouteTestState extends State<NameRouteTest> {
+class _NameRoutePageState extends State<NameRoutePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

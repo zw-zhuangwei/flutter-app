@@ -1,13 +1,13 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 import '../../api/TestApi.dart';
 
-class RequestDioTest extends StatefulWidget {
+class DioPlugWidget extends StatefulWidget {
   @override
-  _RequestDioTestState createState() => _RequestDioTestState();
+  _DioPlugWidgetState createState() => _DioPlugWidgetState();
 }
 
-class _RequestDioTestState extends State<RequestDioTest>
+class _DioPlugWidgetState extends State<DioPlugWidget>
     with SingleTickerProviderStateMixin {
   var _reqData1;
   var _reqData2;

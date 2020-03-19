@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../pages/tabs/BottomBar.dart';
+import '../../widget/BottomBar.dart';
 
-class Replace2RouteTest extends StatefulWidget {
+class Replace2RoutePage extends StatefulWidget {
   final arguments;
-  Replace2RouteTest({this.arguments});
+  Replace2RoutePage({this.arguments});
 
   @override
-  _Replace2RouteTestState createState() => _Replace2RouteTestState();
+  _Replace2RoutePageState createState() => _Replace2RoutePageState();
 }
 
-class _Replace2RouteTestState extends State<Replace2RouteTest> {
+class _Replace2RoutePageState extends State<Replace2RoutePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +29,7 @@ class _Replace2RouteTestState extends State<Replace2RouteTest> {
 
               // 返回BottomBar页
               Navigator.of(context).pushAndRemoveUntil(
-                  MaterialPageRoute(builder: (context) => BottomBar(index: 0)),
+                  MaterialPageRoute(builder: (context) => BottomBar(index: 1)),
                   (route) => route == null)
             },
           ),

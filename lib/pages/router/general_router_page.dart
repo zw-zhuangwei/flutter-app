@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatelessWidget {
-  String title;
-  final arguments;
-  ButtonWidget({this.title = '默认title', this.arguments});
+class GeneralRoutePage extends StatelessWidget {
+  final String title;
+  GeneralRoutePage({
+    this.title = '标题',
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class ButtonWidget extends StatelessWidget {
       appBar: AppBar(
         title: Text(this.title),
       ),
-      body: Text('Button内容！${this.arguments}'),
+      body: Text('普通路由跳转test'),
       floatingActionButton: FloatingActionButton(
         child: Text('返回'),
         onPressed: () => Navigator.of(context).pop(),
