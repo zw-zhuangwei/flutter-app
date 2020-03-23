@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
-import '../../api/TestApi.dart';
+import '../../api/test_api.dart';
 
 class DioPlugWidget extends StatefulWidget {
   @override

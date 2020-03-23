@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
             ),
             // home: BottomBar(),
-            initialRoute: '/', //初始化加载的路由
+            initialRoute: '/gridview_sys_widget', //初始化加载的路由
             //routes: {},
             onGenerateRoute: onGenerateRoute, //路由拦截器
           );

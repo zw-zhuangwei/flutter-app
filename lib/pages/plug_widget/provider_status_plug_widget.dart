@@ -45,7 +45,10 @@ class _ProviderStatusPlugWidgetState extends State<ProviderStatusPlugWidget> {
                   Navigator.of(context)
                       .pushNamed('/provider_status2_plug_widget');
                 },
-              )
+              ),
+              FlatButton(
+                  child: Text("返回"),
+                  onPressed: () => Navigator.of(context).pop()),
             ],
           ),
         ),

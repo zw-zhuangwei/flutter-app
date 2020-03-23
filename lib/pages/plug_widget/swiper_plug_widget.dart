@@ -47,6 +47,10 @@ class _SwiperPlugWidgetState extends State<SwiperPlugWidget> {
             layout: SwiperLayout.STACK,
           ),
         ),
+        FlatButton(
+          child: Text("返回"),
+          onPressed: () => Navigator.of(context).pop(),
+        )
       ],
     );
   }

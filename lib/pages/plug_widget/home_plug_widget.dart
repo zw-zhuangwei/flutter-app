@@ -11,9 +11,12 @@ class _HomePlugWidgetState extends State<HomePlugWidget> {
     return Container(
       width: double.infinity,
       height: double.infinity,
+      padding: EdgeInsets.all(10),
       child: GridView.count(
         crossAxisCount: 3,
-        //childAspectRatio: 1.0,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        childAspectRatio: 2,
         children: <Widget>[
           RaisedButton(
             child: Text('dio测试'),
@@ -37,6 +40,30 @@ class _HomePlugWidgetState extends State<HomePlugWidget> {
             color: Theme.of(context).accentColor,
             onPressed: () => {
               Navigator.pushNamed(context, '/swiper_plug_widget'),
+            },
+          ),
+          RaisedButton(
+            child: Text('shimmer测试'),
+            textTheme: ButtonTextTheme.primary,
+            color: Theme.of(context).accentColor,
+            onPressed: () => {
+              Navigator.pushNamed(context, '/shimmer_plug_widget'),
+            },
+          ),
+          RaisedButton(
+            child: Text('XXXXXX'),
+            textTheme: ButtonTextTheme.primary,
+            color: Theme.of(context).accentColor,
+            onPressed: () => {
+              Navigator.pushNamed(context, '/provider_status_plug_widget'),
+            },
+          ),
+          RaisedButton(
+            child: Text('webview测试'),
+            textTheme: ButtonTextTheme.primary,
+            color: Theme.of(context).accentColor,
+            onPressed: () => {
+              Navigator.pushNamed(context, '/webview_plug_widget'),
             },
           ),
         ],
