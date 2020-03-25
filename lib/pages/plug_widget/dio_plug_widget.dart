@@ -75,7 +75,7 @@ class _DioPlugWidgetState extends State<DioPlugWidget>
                 'title': "什么是跨域？跨域请求资源的方法有哪些555？"
               });
               print(7777777);
-              print(res['data']);
+              print(res);
             },
           ),
           Text('返回数据：${this._reqData1}'),

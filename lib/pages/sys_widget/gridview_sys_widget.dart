@@ -79,7 +79,7 @@ class GridviewSysWidget extends StatelessWidget {
           itemCount: 100,
           padding: EdgeInsets.all(10),
 
-          /// SliverGridDelegateWithFixedCrossAxisCount 构建一个横轴固定数量Widget
+          /// SliverGridDelegateWithMaxCrossAxisExtent 构建一个横轴不固定数量Widget
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 100, //单个子Widget的水平最大宽度
             mainAxisSpacing: 20.0, //水平单个子Widget之间间距

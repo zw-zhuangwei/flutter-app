@@ -7,7 +7,7 @@ import './router/home_router.dart';
 
 import './provider/Counter.dart';
 
-void main() {
+void main() async {
   runZoned(() => runApp(MyApp()), onError: (Object obj, StackTrace stack) {
     //全局未捕获error拦截
     print('全局拦截错误obj：$obj');
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
             ),
             // home: BottomBar(),
-            initialRoute: '/gridview_sys_widget', //初始化加载的路由
+            initialRoute: '/login_account_page', //初始化加载的路由
             //routes: {},
             onGenerateRoute: onGenerateRoute, //路由拦截器
           );

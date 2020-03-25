@@ -22,6 +22,8 @@ class _BottomBarState extends State<BottomBar> {
   List _pageList = [HomePage(), HomeSysWidget(), HomePlugWidget(), DemoPage()];
   List _pageTitleList = ['首页', '系统组件', '第三方组件', '示例'];
 
+  DateTime _lastPressed;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +31,19 @@ class _BottomBarState extends State<BottomBar> {
         title: Text(this._pageTitleList[this._currentIndex]),
       ),
 
-      body: this._pageList[this._currentIndex],
+      body: WillPopScope(
+        onWillPop: () async {
+          if (_lastPressed == null ||
+              DateTime.now().difference(_lastPressed) > Duration(seconds: 1)) {
+            //两次点击间隔超过1秒则重新计时
+            _lastPressed = DateTime.now();
+            print(_lastPressed);
+            return false;
+          }
+          return true;
+        },
+        child: this._pageList[this._currentIndex],
+      ),
 
       drawer: Drawer(child: Text('你好flutter')), //抽屉
 

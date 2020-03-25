@@ -1,4 +1,4 @@
-import '../utils/DioUtil.dart';
+import '../utils/dio_util.dart';
 
 class TestApi {
   static DioUtil request = DioUtil();

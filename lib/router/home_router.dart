@@ -4,6 +4,7 @@ import './widget_router.dart' as WidgetRouter;
 import './sys_widget_router.dart' as SysWidgetRouter;
 import './plug_router.dart' as PlugRouter;
 import './test_router.dart' as TestRouter;
+import './account_router.dart' as AccountRouter;
 
 /// 合并多个路由(Map)对象
 /// 文件路由加在此处
@@ -11,7 +12,8 @@ import './test_router.dart' as TestRouter;
 final Map routes = Map.from(WidgetRouter.routes)
   ..addAll(SysWidgetRouter.routes)
   ..addAll(PlugRouter.routes)
-  ..addAll(TestRouter.routes);
+  ..addAll(TestRouter.routes)
+  ..addAll(AccountRouter.routes);
 
 // 路由拦截器
 Route onGenerateRoute(RouteSettings settings) {
