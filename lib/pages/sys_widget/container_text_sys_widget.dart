@@ -54,6 +54,10 @@ class _ContainerTextSysWidgetState extends State<ContainerTextSysWidget> {
           borderRadius: BorderRadius.circular(8.0), //圆角值
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('返回'),
+        onPressed: () => Navigator.pop(context),
+      ),
     );
   }
 }

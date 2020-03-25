@@ -14,7 +14,7 @@ class ButtonSysWidget extends StatelessWidget {
       body: Text('Button内容！${this.arguments}'),
       floatingActionButton: FloatingActionButton(
         child: Text('返回'),
-        onPressed: () => Navigator.of(context).pop(),
+        onPressed: () => Navigator.pop(context),
       ),
     );
   }

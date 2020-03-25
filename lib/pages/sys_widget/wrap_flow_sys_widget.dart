@@ -4,56 +4,61 @@ class WrapFlowSysWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: <Widget>[
-        Wrap(
-            spacing: 8.0, // 主轴(水平)方向间距
-            runSpacing: 4.0, // 纵轴（垂直）方向间距
-            alignment: WrapAlignment.start, //沿主轴方向居中
-            children: List.generate(10, (index) {
-              return Chip(
-                avatar: CircleAvatar(
-                    backgroundColor: Colors.blue, child: Text('A')),
-                label: Text('Hamilton'),
-              );
-            })),
-        Flow(
-          delegate: TestFlowDelegate(margin: EdgeInsets.all(10.0)),
-          children: <Widget>[
-            new Container(
-              width: 80.0,
-              height: 80.0,
-              color: Colors.red,
-            ),
-            new Container(
-              width: 80.0,
-              height: 80.0,
-              color: Colors.green,
-            ),
-            new Container(
-              width: 80.0,
-              height: 80.0,
-              color: Colors.blue,
-            ),
-            new Container(
-              width: 80.0,
-              height: 80.0,
-              color: Colors.yellow,
-            ),
-            new Container(
-              width: 80.0,
-              height: 80.0,
-              color: Colors.brown,
-            ),
-            new Container(
-              width: 80.0,
-              height: 80.0,
-              color: Colors.purple,
-            ),
-          ],
-        ),
-      ],
-    ));
+      body: Column(
+        children: <Widget>[
+          Wrap(
+              spacing: 8.0, // 主轴(水平)方向间距
+              runSpacing: 4.0, // 纵轴（垂直）方向间距
+              alignment: WrapAlignment.start, //沿主轴方向居中
+              children: List.generate(10, (index) {
+                return Chip(
+                  avatar: CircleAvatar(
+                      backgroundColor: Colors.blue, child: Text('A')),
+                  label: Text('Hamilton'),
+                );
+              })),
+          Flow(
+            delegate: TestFlowDelegate(margin: EdgeInsets.all(10.0)),
+            children: <Widget>[
+              new Container(
+                width: 80.0,
+                height: 80.0,
+                color: Colors.red,
+              ),
+              new Container(
+                width: 80.0,
+                height: 80.0,
+                color: Colors.green,
+              ),
+              new Container(
+                width: 80.0,
+                height: 80.0,
+                color: Colors.blue,
+              ),
+              new Container(
+                width: 80.0,
+                height: 80.0,
+                color: Colors.yellow,
+              ),
+              new Container(
+                width: 80.0,
+                height: 80.0,
+                color: Colors.brown,
+              ),
+              new Container(
+                width: 80.0,
+                height: 80.0,
+                color: Colors.purple,
+              ),
+            ],
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('返回'),
+        onPressed: () => Navigator.pop(context),
+      ),
+    );
   }
 }
 

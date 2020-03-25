@@ -11,10 +11,6 @@ class _ShimmerPlugWidgetState extends State<ShimmerPlugWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Text('返回'),
-        onPressed: () => Navigator.of(context).pop(),
-      ),
       body: Container(
         width: double.infinity,
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
@@ -93,6 +89,10 @@ class _ShimmerPlugWidgetState extends State<ShimmerPlugWidget> {
             // )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('返回'),
+        onPressed: () => Navigator.pop(context),
       ),
     );
   }

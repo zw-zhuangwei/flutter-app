@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/home/home_page.dart';
 import '../pages/sys_widget/home_sys_widget.dart';
 import '../pages/plug_widget/home_plug_widget.dart';
-import '../pages/demo/demo_page.dart';
+import '../pages/mine/home_mine_page.dart';
 
 class BottomBar extends StatefulWidget {
   final int index; //从其他页面返回到BottomBar
@@ -19,8 +19,13 @@ class _BottomBarState extends State<BottomBar> {
     _currentIndex = index;
   }
 
-  List _pageList = [HomePage(), HomeSysWidget(), HomePlugWidget(), DemoPage()];
-  List _pageTitleList = ['首页', '系统组件', '第三方组件', '示例'];
+  List _pageList = [
+    HomePage(),
+    HomeSysWidget(),
+    HomePlugWidget(),
+    HomeMinePage()
+  ];
+  List _pageTitleList = ['首页', '系统组件', '第三方组件', '我的'];
 
   DateTime _lastPressed;
 
@@ -73,7 +78,7 @@ class _BottomBarState extends State<BottomBar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.details),
-            title: Text('示例'),
+            title: Text('我的'),
           ),
         ],
       ),

@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
             ),
             // home: BottomBar(),
-            initialRoute: '/login_account_page', //初始化加载的路由
+            initialRoute: '/', //初始化加载的路由
             //routes: {},
             onGenerateRoute: onGenerateRoute, //路由拦截器
           );

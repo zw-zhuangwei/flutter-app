@@ -16,11 +16,11 @@ class _ScrollControllerSysWidgetState extends State<ScrollControllerSysWidget> {
     //监听滚动事件，打印滚动位置
     _controller.addListener(() {
       print(_controller.offset); //打印滚动位置
-      if (_controller.offset < 1000 && showToTopBtn) {
+      if (_controller.offset < 500 && showToTopBtn) {
         setState(() {
           showToTopBtn = false;
         });
-      } else if (_controller.offset >= 1000 && showToTopBtn == false) {
+      } else if (_controller.offset >= 500 && showToTopBtn == false) {
         setState(() {
           showToTopBtn = true;
         });

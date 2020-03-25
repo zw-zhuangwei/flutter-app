@@ -26,7 +26,7 @@ class WebviewPlugWidget extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           child: Text('返回'),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () => Navigator.pop(context),
         ),
       ),
     );

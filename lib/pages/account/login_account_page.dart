@@ -32,7 +32,7 @@ class _LoginAccountPageState extends State<LoginAccountPage> {
           child: Column(
             children: <Widget>[
               TextFormField(
-                  autofocus: true,
+                  //  autofocus: true,  目前配置这个会报错 等待官方修复
                   controller: _unameController,
                   decoration: InputDecoration(
                       labelText: "用户名",

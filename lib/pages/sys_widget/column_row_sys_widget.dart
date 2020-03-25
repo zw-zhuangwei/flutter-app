@@ -37,6 +37,10 @@ class ColumnRowSysWidget extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('返回'),
+        onPressed: () => Navigator.pop(context),
+      ),
     );
   }
 }

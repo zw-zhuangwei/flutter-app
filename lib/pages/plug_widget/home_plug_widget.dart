@@ -19,6 +19,16 @@ class _HomePlugWidgetState extends State<HomePlugWidget> {
         childAspectRatio: 2,
         children: <Widget>[
           RaisedButton(
+            child: Text('路由跳转'),
+            textTheme: ButtonTextTheme.primary,
+            color: Theme.of(context).accentColor,
+            onPressed: () => {
+              Navigator.pushNamed(context, '/home_router_page', arguments: {
+                'name': 'zhuangwei11122',
+              })
+            },
+          ),
+          RaisedButton(
             child: Text('dio测试'),
             textTheme: ButtonTextTheme.primary,
             color: Theme.of(context).accentColor,
@@ -51,11 +61,11 @@ class _HomePlugWidgetState extends State<HomePlugWidget> {
             },
           ),
           RaisedButton(
-            child: Text('XXXXXX'),
+            child: Text('url_launcher'),
             textTheme: ButtonTextTheme.primary,
             color: Theme.of(context).accentColor,
             onPressed: () => {
-              Navigator.pushNamed(context, '/provider_status_plug_widget'),
+              Navigator.pushNamed(context, '/url_launcher_plug_widget'),
             },
           ),
           RaisedButton(
